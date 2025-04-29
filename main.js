@@ -19,5 +19,9 @@ let compliment = [
 
 btn.addEventListener("click", function () {
   var randomCompliment = compliment[Math.floor(Math.random() * compliment.length)];
-  output.innerHTML = randomCompliment;
+  output.style.opacity=0;
+  setTimeout(()=>{
+      output.innerHTML = randomCompliment;
+      output.style.opacity=1;
+  },150)
 });
